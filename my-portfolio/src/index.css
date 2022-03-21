@@ -1,0 +1,33 @@
+
+main {
+	margin: 0 auto;
+	max-width: 90%;
+  padding: 50px 30px;
+  color: var(--tertiary-color)
+}
+
+:root {
+    --primary-color: #0d698b;
+    --secondary-color: #f2f1e8;
+    --tertiary-color: #050533;
+    --quaternary-color: #E32234;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.m-5{
+    margin: 10%;
+}
+
+.navActive {
+    color: var(--quaternary-color);
+}
