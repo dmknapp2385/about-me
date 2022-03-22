@@ -63,6 +63,10 @@ li {
     padding-top: 11rem!important;
 }
 
+.pb-13 {
+    padding-bottom: 11rem!important;
+}
+
 .pointer {
     cursor: pointer;
 }
