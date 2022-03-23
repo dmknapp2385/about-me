@@ -1,7 +1,5 @@
 import React from "react";
-import images from '../../images'
 
-console.log(images)
 //on hover, show popup modal with description of project
 function Works () {
     const works =[
