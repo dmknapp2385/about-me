@@ -1,4 +1,5 @@
 import React from "react";
+import { getKey } from '../../utils/helpers';
 
 //on hover, show popup modal with description of project
 function Works () {
@@ -6,7 +7,7 @@ function Works () {
         {
             name: 'Song Starter 3000',
             description: 'An application designed to help cultivate creativity in musicians by generating random chord progressions',
-            image: 'song-starter.jpg',
+            image: 'Song-Starter-3000',
             url: 'https://song-starter-3000.herokuapp.com/',
             github: 'https://github.com/dmknapp2385/Song-Starter-3000/tree/main',
         },
@@ -45,25 +46,40 @@ function Works () {
             url: 'https://arcane-ridge-53547.herokuapp.com/',
             github: 'https://github.com/dmknapp2385/Notable',
         },
-    ]    
+    ]  
+    
+    const worksArray1 = 
+                works.slice(0, 3);
+            
+    const worksArray2 =
+                works.slice(3, 3 + works.length);
+    
     return(
 
-        <div className="tile is-ancestor is-9 pt-13">
-            <div className="tile is-parent">
-                {works.map((work)=>(
-                    <div className={`${work.name} tile is-child`} key={work.name}>
-                        <h1 className="quad">
-                            {work.name}
-                        </h1>
-                        <p className="primary">
-                            {work.description}
-                        </p>
-                        <img href={work.url}  alt={work.name}/>
-                        <a href={work.github} target='_blank'>GitHub Repository</a>
-                    </div>
-                ))}
+        <div className="is-9 pt-13">
+            <div className="tile is-ancestor mx-auto">
+                    {worksArray1.map((work)=>(
+                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: 
+                        'ivory', border:'black',  height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
+                            <a className="tile pr-4 is-child" href={work.url} target='_blank'>
+                                <h1 className="quad has-text-centered">{work.name}</h1>
+                            </a>
+                            <a className="primary tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
+                        </div>
+                    ))}
+            </div>
+            <div className="tile is-ancestor mx-auto pt-6">
+                    {worksArray2.map((work)=>(
+                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: 'ivory', border:'black', height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
+                            <a className="tile pr-4 is-child" href={work.url} target='_blank'>
+                                <h1 className="quad has-text-centered">{work.name}</h1>
+                            </a>
+                            <a className="primary tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
+                        </div>
+                    ))}
             </div>
         </div>
+        
     )
 }
 
