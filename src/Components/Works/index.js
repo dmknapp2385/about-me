@@ -59,22 +59,21 @@ function Works () {
         <div className="is-9 pt-13">
             <div className="tile is-ancestor mx-auto">
                     {worksArray1.map((work)=>(
-                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: 
-                        'ivory', border:'black',  height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
+                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: '#FFCD9B', border:'solid .3rem grey', height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
                             <a className="tile pr-4 is-child" href={work.url} target='_blank'>
                                 <h1 className="quad has-text-centered">{work.name}</h1>
                             </a>
-                            <a className="primary tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
+                            <a className="primary has-text-centered tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
                         </div>
                     ))}
             </div>
             <div className="tile is-ancestor mx-auto pt-6">
                     {worksArray2.map((work)=>(
-                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: 'ivory', border:'black', height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
+                        <div className="tile is-parent is-vertical m-3" style={{backgroundColor: '#FFCD9B', border:'solid .3rem grey', height: '30vh', width: '25vw', borderRadius: '30%'}} key={getKey(work.name)}>
                             <a className="tile pr-4 is-child" href={work.url} target='_blank'>
                                 <h1 className="quad has-text-centered">{work.name}</h1>
                             </a>
-                            <a className="primary tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
+                            <a className="primary has-text-centered tile is-child" href={work.github} target='_blank'>GitHub Repository</a>
                         </div>
                     ))}
             </div>
