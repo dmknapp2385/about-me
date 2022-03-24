@@ -7,7 +7,7 @@ function Nav (props) {
         setCurrentSection
     } = props;
     return(
-        <nav className="navbar is-fixed-top bkg-tert" role="navigation" aria-label="main navigation">
+        <nav className="navbar top-nav is-fixed-top bkg-tert" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item ml-6">
                  <span className="is-size-1 has-text-weight-bold is-italic ml-4 quad" onClick={()=> {setCurrentSection({name: 'About Me'})}}>DaniElle Knapp</span>

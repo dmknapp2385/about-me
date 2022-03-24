@@ -13,13 +13,13 @@ function Contact () {
             const isValid = validateEmail(e.target.value);
             // isValid conditional statement
             if (!isValid) {
-                setErrorMessage('Your email is invalid.');
+                setErrorMessage('Your email is invalid');
               } else {
                 setErrorMessage('');
               }
         } else {
             if (!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
+                setErrorMessage(`${e.target.name} is required`);
             } else {
                 setErrorMessage('');
             }
@@ -30,34 +30,48 @@ function Contact () {
     }
 
     function handleSubmit(e) {
-        e.preventDefault();
-        console.log(formState)
+        e.preventDefault()
+        alert('Your email has been submitted')
+
     }
 
     return (
-        <section className="pt-13">
-            <h1>
+        <section className="pt-13 mx-auto" style={{maxWidth: '400px'}}>
+            <h1 className="pb-4 is-size-3">
                 Contact Me
             </h1>
             <form onSubmit={handleSubmit} id='contact-form'>
-                <div>
-                    <label htmlFor='name' >Name:</label>
-                    <input onBlur={handleChange} defaultValue={name}  type='text' name='name'/>
+                <div className="field">
+                    <label className="tert label" htmlFor='name' >Name:</label>
+                    <div className="control">
+                        <input className="input" onBlur={handleChange} defaultValue={name}  type='text' name='name'/>
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor='email'>Email address:</label>
-                    <input onBlur={handleChange} defaultValue={email}  type='email' name='email'/>
+                <div className="field">
+                    <label className="tert label" htmlFor='email'>Email address:</label>
+                    <div className="control">
+                        <input className="input" onBlur={handleChange} defaultValue={email}  type='email' name='email'/>
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor='message'>Message:</label>
-                    <textarea onBlur={handleChange} defaultValue={message}  name='message' rows='5' />
+                <div className="field"> 
+                    <label className="tert label" htmlFor='message'>Message:</label>
+                    <div className="control">
+                        <textarea className="textarea" onBlur={handleChange} defaultValue={message}  name='message' rows='5' />
+                    </div>
                 </div>
                 {errorMessage && (
                     <div>
-                        <p className="error-text">{errorMessage}</p>
+                        <p className="help is-size-5 quad error-text is-3">{errorMessage}</p>
                     </div>
                 )}
-                <button type="sumbit">Submit</button>
+                <div className="field is-grouped pt-5 pb-6">
+                    <div className="control">
+                        <button className="button is-link quad" type="sumbit">Submit</button>
+                    </div>
+                    <div className="control">
+                        <button className="button is-link primary" >Cancel</button>
+                    </div>
+                </div>
                 
             </form>
         </section>
