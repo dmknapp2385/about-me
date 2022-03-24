@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <div className="navbar is-fixed-bottom">
+        <div className="navbar">
             <div className="navbar-center level">
                 <a href="https://github.com/dmknapp2385" target='_blank' className="navbar-item">
                     GitHub

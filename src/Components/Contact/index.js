@@ -66,10 +66,10 @@ function Contact () {
                 )}
                 <div className="field is-grouped pt-5 pb-6">
                     <div className="control">
-                        <button className="button is-link quad" type="sumbit">Submit</button>
+                        <button className="button bkg-tert quad" type="sumbit">Submit</button>
                     </div>
                     <div className="control">
-                        <button className="button is-link primary" >Cancel</button>
+                        <button className="button is-white">Cancel</button>
                     </div>
                 </div>
                 
