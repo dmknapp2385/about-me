@@ -14,31 +14,26 @@ function App() {
 
   const [currentSection, setCurrentSection] = useState(sections[0]);
 
-  // hook to get window size to activate navbar burger
-  const [windowSize, setWindowSize] = useState({width: window.innerWidth, height: window.innerHeight});
-
   // isMobile if under 1023 px
-  const [isMobile, setIsMobile] = useState();
 
   // hook called when windowSize is set to determine if isMobile
-  useEffect(() => {
-    if(windowSize.width <= 1023) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false)
-    }
-  }, [windowSize]);
+  const getIsMobile = () => window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(getIsMobile());
 
-  function handleResize() {
-      setWindowSize({width:window.innerWidth, height:window.innerHeight});
-    }   
+    useEffect(() => {
+        const onResize = () => {
+            setIsMobile(getIsMobile());
+        }
 
-  //function to only call handleResize when resize complete
-  let timeOut; 
-  window.addEventListener('resize', function() {
-     clearTimeout(timeOut);
-     timeOut = setTimeout(handleResize, 500);
-  });
+        window.addEventListener("resize", onResize);
+    
+        return () => {
+            window.removeEventListener("resize", onResize);
+        }
+    }, []);
+    
+  console.log(isMobile);
+
   
   return (
     <div className='has-navbar-fixed-top'>
