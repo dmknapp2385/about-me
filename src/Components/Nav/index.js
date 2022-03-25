@@ -9,10 +9,8 @@ function Nav (props) {
         setIsMobile
     } = props;
 
-    console.log(isMobile);
     // function to toggle isMobile on/off for menu button
     function toggleBurger() {
-        console.log(isMobile, 'is mobile before');
         setIsMobile(!isMobile);
     }
 

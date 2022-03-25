@@ -29,14 +29,17 @@ function App() {
     }
   }, [windowSize]);
 
-  useEffect(() => {
-    function handleResize() {
+  function handleResize() {
       setWindowSize({width:window.innerWidth, height:window.innerHeight});
-    
     }   
-    window.addEventListener('resize', handleResize)
-  })
 
+  //function to only call handleResize when resize complete
+  let timeOut; 
+  window.addEventListener('resize', function() {
+     clearTimeout(timeOut);
+     timeOut = setTimeout(handleResize, 500);
+  });
+  
   return (
     <div className='has-navbar-fixed-top'>
       <header>
