@@ -17,11 +17,12 @@ function App() {
   // isMobile if under 1023 px
 
   // hook called when windowSize is set to determine if isMobile
-  const getIsMobile = () => window.innerWidth <= 768;
+  const getIsMobile = () => window.innerWidth <= 1023;
   const [isMobile, setIsMobile] = useState(getIsMobile());
 
     useEffect(() => {
         const onResize = () => {
+          console.log('onresize called')
             setIsMobile(getIsMobile());
         }
 
