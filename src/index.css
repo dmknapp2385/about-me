@@ -24,7 +24,7 @@
     color: var(--secondary-color)
 }
 
-.top-nav * {
+.top-nav *:not(.burger) {
     background-color: var(--tertiary-color)!important;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .quad {
-    color: var(--quaternary-color)
+    color: var(--quaternary-color)!important
 }
 
 .bkg-tert {
