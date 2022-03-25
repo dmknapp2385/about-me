@@ -9,12 +9,13 @@ function Nav (props) {
         setIsMobile
     } = props;
 
-    const burgerView = isMobile;
-
+    console.log(isMobile);
     // function to toggle isMobile on/off for menu button
     function toggleBurger() {
-        console.log(burgerView)
+        console.log(isMobile, 'is mobile before');
+        setIsMobile(!isMobile);
     }
+
     return(
         <nav className="navbar top-nav is-fixed-top bkg-tert" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -22,14 +23,14 @@ function Nav (props) {
                  <span className="is-size-1 has-text-weight-bold is-italic ml-4 quad" onClick={()=> {setCurrentSection({name: 'About Me'})}}>DaniElle Knapp</span>
                 </a>
 
-                <a role="button" className={`navbar-burger burger ${burgerView && 'is-active'}`}aria-label="menu" aria-expanded="false" data-target="burger" onClick={() => {toggleBurger()}}>
+                <a role="button" className={`navbar-burger burger ${isMobile && 'is-active'}`}aria-label="menu" aria-expanded="false" data-target="burger" onClick={() => {toggleBurger()}}>
                 <span className="burger quad" aria-hidden="true"></span>
                 <span className="burger quad" aria-hidden="true"></span>
                 <span className="burger quad" aria-hidden="true"></span>
                 </a>
             </div>
 
-            <div id="sections" className={`navbar-menu ${!burgerView && 'is-active'}`}>
+            <div id="sections" className={`navbar-menu ${!isMobile && 'is-active'}`}>
                 <div className="navbar-end level mr-6">
             
                 {sections.map((section)=> (

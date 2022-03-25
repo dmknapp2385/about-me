@@ -27,14 +27,15 @@ function App() {
     } else {
       setIsMobile(false)
     }
-  });
+  }, [windowSize]);
 
-  function handleResize() {
-    setWindowSize({width:window.innerWidth, height:window.innerHeight});
-  }
-
-  window.addEventListener('resize', handleResize);
-
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({width:window.innerWidth, height:window.innerHeight});
+    
+    }   
+    window.addEventListener('resize', handleResize)
+  })
 
   return (
     <div className='has-navbar-fixed-top'>
