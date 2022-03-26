@@ -77,7 +77,6 @@ function Works () {
                                 src={require(`../../images/${work.image}.jpg`)}
                                 alt={work.name}
                                 className="mx-1 img-thumb"
-                                style={{}}
                                 onClick={() => toggleModal(work)}
                             />
                         </div>
@@ -92,7 +91,7 @@ function Works () {
                             alt={work.name}
                             className="mx-1 img-thumb"
                             // onClick={() => toggleModal(image, i)}
-                            key={getKey(work.name)}
+                            onClick={() => toggleModal(work)}
                         />
                     </div>
 

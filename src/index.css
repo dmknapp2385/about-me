@@ -73,7 +73,7 @@ li {
 }
 
 .modalBackdrop {
-    background: rgba(0, 0, 0, .65);
+    background: rgba(0, 0, 0, .75);
 	bottom: 0;
 	left: 0;
 	overflow: auto;
@@ -84,12 +84,17 @@ li {
 }
 
 .modalContainer {
-    background: var(--primary-color);
+    background-color: var(--tertiary-color);
 	border-radius: 5px;
 	max-width: 100%;
 	margin: 50px auto;
 	padding: 15px;
 	width: 960px;
+}
+
+.modalContainer * {
+    color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
 }
 
 .navActive {

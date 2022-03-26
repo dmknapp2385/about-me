@@ -8,11 +8,11 @@ function Work ({currentWork, onClose}) {
     return(
         <div className="modalBackdrop" onClick={onClose}>
             <div className="modalContainer">
-                <h3 className="modalTitle">
+                <h3 className="modalTitle has-text-centered mb-2">
                     {name}
                 </h3>
-                <img src={require(`../../images/${image}.jpg`)} alt={name} />
-                <p>
+                <a href={url} target='_blank'><img src={require(`../../images/${image}.jpg`)} style={{borderRadius:'5px'}} alt={name} /></a>
+                <p >
                     {description}
                 </p>
                 <a href={github} target='_blank'>GitHub Repository</a>
