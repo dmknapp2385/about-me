@@ -1,13 +1,12 @@
 import React from "react";
 
-function Work ({currentWork}) {
+function Work ({currentWork, onClose}) {
 
-    console.log('inwork', currentWork);
     const { name, description, image, url, github } = currentWork;
 
 
     return(
-        <div className="modalBackdrop">
+        <div className="modalBackdrop" onClick={onClose}>
             <div className="modalContainer">
                 <h3 className="modalTitle">
                     {name}

@@ -62,13 +62,13 @@ function Works () {
 
     const toggleModal = (work) => {
         setCurrentWork({...work});
-        setViewModal(true);
+        setViewModal(!viewModal);
      }
 
    return(
 
         <div className="is-9 pt-13">
-            {viewModal && <Work currentWork={currentWork} />}
+            {viewModal && <Work currentWork={currentWork} onClose={toggleModal}/>}
             <div className="tile is-ancestor">
                 
                     {worksArray1.map((work)=>(
@@ -79,7 +79,6 @@ function Works () {
                                 className="mx-1 img-thumb"
                                 style={{}}
                                 onClick={() => toggleModal(work)}
-                                onMouseLeave={() => setViewModal(false)}
                             />
                         </div>
 
