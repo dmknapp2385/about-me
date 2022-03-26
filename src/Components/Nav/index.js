@@ -11,9 +11,12 @@ function Nav (props) {
 
     // function to toggle isMobile on/off for menu button
     function toggleBurger() {
-        setIsMobile(!isMobile);
+        setIsMobile(!isMobile)
+        setTimeout(() => {
+            setIsMobile(isMobile)
+        }, 1500); ;
     }
-
+    
     return(
         <nav className="navbar top-nav is-fixed-top bkg-tert" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -21,7 +24,7 @@ function Nav (props) {
                  <span className="is-size-1 has-text-weight-bold is-italic ml-4 quad" onClick={()=> {setCurrentSection({name: 'About Me'})}}>DaniElle Knapp</span>
                 </a>
 
-                <a role="button" className={`navbar-burger burger ${isMobile && 'is-active'}`}aria-label="menu" aria-expanded="false" data-target="burger" onClick={() => {toggleBurger()}}>
+                <a role="button" className={`navbar-burger burger`}aria-label="menu" aria-expanded="false" data-target="burger" onClick={() => {toggleBurger()}}>
                 <span className="burger quad" aria-hidden="true"></span>
                 <span className="burger quad" aria-hidden="true"></span>
                 <span className="burger quad" aria-hidden="true"></span>

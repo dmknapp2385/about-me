@@ -31,8 +31,7 @@ function App() {
             window.removeEventListener("resize", onResize);
         }
     }, []);
-    
-
+     
   
   return (
     <div className='has-navbar-fixed-top'>

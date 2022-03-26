@@ -110,6 +110,11 @@
     color: var(--secondary-color);
 }
 
+h2 {
+    font-style: italic;
+    font-weight: bold;
+}
+
 footer * {
     background-color: var(--secondary-color);
 }
