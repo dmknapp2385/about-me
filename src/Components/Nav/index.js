@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 function Nav (props) {
     const {
@@ -8,6 +8,11 @@ function Nav (props) {
         isMobile,
         setIsMobile
     } = props;
+    
+    useEffect(() => {
+        console.log('in use effect', currentSection.name)
+        document.title = currentSection.name;
+      }, [currentSection]);
 
     // function to toggle isMobile on/off for menu button
     function toggleBurger() {

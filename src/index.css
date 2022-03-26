@@ -3,7 +3,8 @@
     --secondary-color: #f2f1e8;
     --tertiary-color: #050533;
     --quaternary-color: #E32234;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-one: 'Noto Serif', serif;
+    --font-two: 'Nunito Sans', sans-serif;
 }
 
 * {
@@ -13,6 +14,7 @@
     box-sizing: border-box;
     color: var(--tertiary-color);
     background-color: var(--secondary-color);
+    font-family: var(--font-one);
 }
 
 .primary {
