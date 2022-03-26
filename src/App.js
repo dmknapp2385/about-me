@@ -22,7 +22,6 @@ function App() {
 
     useEffect(() => {
         const onResize = () => {
-          console.log('onresize called')
             setIsMobile(getIsMobile());
         }
 
@@ -33,7 +32,6 @@ function App() {
         }
     }, []);
     
-  console.log(isMobile);
 
   
   return (

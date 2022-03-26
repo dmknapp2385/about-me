@@ -44,6 +44,14 @@ li {
     list-style-type: none;
 }
 
+.img-thumb {
+    background-color: var(--primary-color); 
+    /* border:solid 1rem var(--quaternary-color); */
+    border-radius: 10% 15%;
+}
+
+
+
 #self-img {
     border-radius: 50%;
     max-height: 200px;
