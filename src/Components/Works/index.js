@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { getKey } from '../../utils/helpers';
+import Work from '../Work';
 
 //on hover, show popup modal with description of project
 function Works () {
@@ -54,20 +55,33 @@ function Works () {
             
     const worksArray2 =
                 works.slice(3, 3 + works.length);
+
+    const [viewModal, setViewModal] = useState(false);
+
+    const [currentWork, setCurrentWork] = useState();
+
+    const toggleModal = (work) => {
+        setCurrentWork({...work});
+        setViewModal(true);
+     }
+
    return(
 
         <div className="is-9 pt-13">
+            {viewModal && <Work currentWork={currentWork} />}
             <div className="tile is-ancestor">
+                
                     {worksArray1.map((work)=>(
-                    <div className="tile is-parent mx-4" key={getKey(work.name)}>
-                        <img
-                            src={require(`../../images/${work.image}.jpg`)}
-                            alt={work.name}
-                            className="mx-1 img-thumb"
-                            style={{}}
-                            // onClick={() => toggleModal(image, i)}
-                        />
-                    </div>
+                        <div className="tile is-parent mx-4" key={getKey(work.name)}>
+                            <img
+                                src={require(`../../images/${work.image}.jpg`)}
+                                alt={work.name}
+                                className="mx-1 img-thumb"
+                                style={{}}
+                                onClick={() => toggleModal(work)}
+                                onMouseLeave={() => setViewModal(false)}
+                            />
+                        </div>
 
                     ))}
             </div>
