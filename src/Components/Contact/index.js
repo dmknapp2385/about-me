@@ -8,6 +8,10 @@ function Contact () {
 
     const [errorMessage, setErrorMessage] = useState('');
 
+    function handleState(e) {
+        setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
+    
     function handleChange(e) {
         if (e.target.name === 'email') {
             const isValid = validateEmail(e.target.value);
@@ -30,9 +34,22 @@ function Contact () {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
-        alert('Your email has been submitted')
+        e.preventDefault();
+        const { name, email, message } = formState;
+        const isValid = validateEmail(email)
+        if(name.length === 0 || !validateEmail || message.length === 0){
+            alert('Please complete the form')
+        } else {
+            alert('Your email has been submitted')
+            setFormState({name:'', email:'', message: ''});
+        }
+        
+    }
 
+    function clearForm(e) {
+        e.preventDefault();
+        setFormState({name:'', email:'', message: ''});
+        setErrorMessage('');
     }
 
     return (
@@ -42,21 +59,21 @@ function Contact () {
             </h1>
             <form onSubmit={handleSubmit} id='contact-form'>
                 <div className="field">
-                    <label className="tert label" htmlFor='name' >Name:</label>
+                    <label className="tert label" htmlFor='name'>Name:</label>
                     <div className="control">
-                        <input className="input" onBlur={handleChange} defaultValue={name}  type='text' name='name'/>
+                        <input value={formState.name} className="input" onChange={handleState} onBlur={handleChange} defaultValue={name}  type='text' name='name'/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="tert label" htmlFor='email'>Email address:</label>
                     <div className="control">
-                        <input className="input" onBlur={handleChange} defaultValue={email}  type='email' name='email'/>
+                        <input className="input" value={formState.email} onChange={handleState} onBlur={handleChange} defaultValue={email}  type='email' name='email'/>
                     </div>
                 </div>
                 <div className="field"> 
                     <label className="tert label" htmlFor='message'>Message:</label>
                     <div className="control">
-                        <textarea className="textarea" onBlur={handleChange} defaultValue={message}  name='message' rows='5' />
+                        <textarea value={formState.message} onChange={handleState} className="textarea" onBlur={handleChange} defaultValue={message}  name='message' rows='5' />
                     </div>
                 </div>
                 {errorMessage && (
@@ -69,7 +86,7 @@ function Contact () {
                         <button className="button bkg-tert quad" type="sumbit">Submit</button>
                     </div>
                     <div className="control">
-                        <button className="button is-white">Cancel</button>
+                        <button onClick={clearForm} className="button is-white">Cancel</button>
                     </div>
                 </div>
                 

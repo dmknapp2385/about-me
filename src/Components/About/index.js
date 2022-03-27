@@ -2,7 +2,6 @@ import React from 'react'
 import headShot from '../../images/head-shot.jpg';
 
 function About({isMobile}) {
-  console.log(isMobile, 'from is mobile')
  
   return (
     <section className='pt-13 pb-13' id='about'>
