@@ -117,6 +117,20 @@ h2 {
     font-weight: bold;
 }
 
-footer * {
+.is-fixed-bottom {
     background-color: var(--secondary-color);
+    z-index: -1;
 }
+
+.is-fixed-bottom > div {
+    margin: 0 auto;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .mobile-nav {
+        font-size: 1.6rem!important;
+        margin-left: .1rem!important;
+    }
+  }

@@ -4,11 +4,11 @@ import Works from '../Works';
 import Contact from '../Contact';
 import Resume from '../Resume';
 
-function Body({currentSection}) {
+function Body({currentSection, isMobile}) {
     const {name} = currentSection;
     if (name === 'About Me'){
         return (
-            <About/>
+            <About isMobile={isMobile}/>
         )
     } else if (name === 'My Work') {
         return (

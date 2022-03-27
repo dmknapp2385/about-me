@@ -10,7 +10,6 @@ function Nav (props) {
     } = props;
     
     useEffect(() => {
-        console.log('in use effect', currentSection.name)
         document.title = currentSection.name;
       }, [currentSection]);
 
@@ -26,7 +25,7 @@ function Nav (props) {
         <nav className="navbar top-nav is-fixed-top bkg-tert" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item ml-6">
-                 <span className="is-size-1 has-text-weight-bold is-italic ml-4 quad" onClick={()=> {setCurrentSection({name: 'About Me'})}}>DaniElle Knapp</span>
+                 <span className="is-size-2 has-text-weight-bold is-italic ml-4 quad mobile-nav" onClick={()=> {setCurrentSection({name: 'About Me'})}}>DaniElle Knapp</span>
                 </a>
 
                 <a role="button" className={`navbar-burger burger`}aria-label="menu" aria-expanded="false" data-target="burger" onClick={() => {toggleBurger()}}>

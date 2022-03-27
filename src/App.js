@@ -47,6 +47,7 @@ function App() {
       <section id='main-section'>
         <Body
           currentSection={currentSection}
+          isMobile={isMobile}
         >
         </Body>
       </section>
