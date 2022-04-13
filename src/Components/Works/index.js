@@ -67,7 +67,7 @@ function Works () {
 
    return(
 
-        <div className="is-9 pt-13">
+        <div className="is-9 pt-13 pb-6">
             {viewModal && <Work currentWork={currentWork} onClose={toggleModal}/>}
             <div className="tile is-ancestor">
                 

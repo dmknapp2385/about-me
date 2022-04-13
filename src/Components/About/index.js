@@ -5,7 +5,7 @@ function About({isMobile}) {
  
   return (
     <section className='pt-13 pb-13' id='about'>
-      <div className={` ml-6 mr-6 is-flex ${isMobile && 'is-flex-wrap-wrap'} is-justify-content-space-around level`}>
+      <div className={` ml-6 pb-6 mr-6 is-flex ${isMobile && 'is-flex-wrap-wrap'} is-justify-content-space-around level`}>
         <img className='mr-6' id='self-img' src={headShot}/>
         <p className='mr-6 '>
         I am an avid rock climber and adventurer. Currently exploring the wonders of HTML, CSS and JavaScript in the hopes of obtaining a remote job that will allow me to travel and climb. I have always been a problem solver and find web development to be a perfect blend of problem solving and creativity. My background before coming to web development and programming was in biology and I attended two years of college at Cornell University and Wellesley college to obtain a bachelor's degree in Biology, though after discovering rock climbing, I had no interest in pursuing a career with this degree.
