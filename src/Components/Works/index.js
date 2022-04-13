@@ -28,11 +28,11 @@ function Works () {
         },
 
         {
-            name: 'Coding Quiz',
-            description: 'A simple website used to test basic coding concepts. The quiz is timed and time is deducted for wrong answers. High scores are saved',
-            image: 'Coding-Quiz',
-            url: 'https://dmknapp2385.github.io/Coding-Quiz/',
-            github: 'https://github.com/dmknapp2385/Coding-Quiz',
+            name: 'Rocks and Ropes',
+            description: 'A website designed for a local climbing gym, Rocks and Ropes, that explains the exipment and usage. As well as offering the option to login/signup to save activities to a weekly calendar.',
+            image: 'Rocks-and-Ropes',
+            url: 'https://rocks-and-ropes.herokuapp.com/',
+            github: 'https://github.com/dmknapp2385/rocks-and-ropes',
         },
         {
             name: 'WeatherSpot',
