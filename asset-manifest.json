@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/about-me/static/css/main.0dc4ac70.css",
-    "main.js": "/about-me/static/js/main.08a0e168.js",
+    "main.js": "/about-me/static/js/main.7524a0ea.js",
     "static/js/787.128fc6e9.chunk.js": "/about-me/static/js/787.128fc6e9.chunk.js",
     "static/media/WeatherSpot.jpg": "/about-me/static/media/WeatherSpot.9088aafa342e689d294b.jpg",
+    "static/media/Rocks-and-Ropes.jpg": "/about-me/static/media/Rocks-and-Ropes.b8b251d4fc9df95c3e5c.jpg",
     "static/media/Bored-and-Brews.jpg": "/about-me/static/media/Bored-and-Brews.15b64dce9757178e6c8d.jpg",
     "static/media/head-shot.jpg": "/about-me/static/media/head-shot.9dc133f942800a5e3f23.jpg",
     "static/media/Techy-News.jpg": "/about-me/static/media/Techy-News.b9b9f9486faa52f6da5f.jpg",
@@ -12,11 +13,11 @@
     "static/media/Song-Starter-3000.jpg": "/about-me/static/media/Song-Starter-3000.31416d3519dc82db8710.jpg",
     "index.html": "/about-me/index.html",
     "main.0dc4ac70.css.map": "/about-me/static/css/main.0dc4ac70.css.map",
-    "main.08a0e168.js.map": "/about-me/static/js/main.08a0e168.js.map",
+    "main.7524a0ea.js.map": "/about-me/static/js/main.7524a0ea.js.map",
     "787.128fc6e9.chunk.js.map": "/about-me/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dc4ac70.css",
-    "static/js/main.08a0e168.js"
+    "static/js/main.7524a0ea.js"
   ]
 }
