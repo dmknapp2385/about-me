@@ -13,15 +13,23 @@ function Resume () {
                 <li>Bulma</li>
                 <li>Bootstrap</li>
                 <li>HandleBars</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>apollo/client</li>
             </ul>
-            <ul className="disc ml-3 mb-4">
+            <ul className="disc">
                 <h2>Back End Proficiencies</h2>
                 <li>Node.js</li>
-                <li>Insomnia REST API</li>
                 <li>Express.js</li>
                 <li>MySQL</li>
                 <li>MongoDB</li>
-                <li>React</li>
+                <li>Apollo/GraphQL</li>
+            </ul>
+            <ul className="disc ml-3 mb-4">
+                <h2>Other Technologies</h2>
+                <li>Git/GitHub</li>
+                <li>VS Code</li>
+                <li>Insomnia REST API</li>
             </ul>
         </div>
     )
