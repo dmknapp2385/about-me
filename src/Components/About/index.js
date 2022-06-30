@@ -4,7 +4,7 @@ import headShot from '../../images/head-shot.jpg';
 function About({isMobile}) {
  
   return (
-    <section className='pt-13 pb-13' id='about'>
+    <section className='pt-15 pb-13' id='about'>
       <div className={` ml-6 pb-6 mr-6 is-flex ${isMobile && 'is-flex-wrap-wrap'} is-justify-content-space-around level`}>
         <img className='mr-6' id='self-img' src={headShot}/>
         <p className='mr-6 '>

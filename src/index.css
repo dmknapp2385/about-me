@@ -7,6 +7,12 @@
     --font-two: 'Nunito Sans', sans-serif;
 }
 
+/* html{
+    background-image: url(./images/reef.jpg);
+    background-size: cover;
+    background-position: center;
+} */
+
 * {
 	margin: 0;
     padding: 0;
@@ -72,7 +78,10 @@
 
 
 .pt-13 {
-    padding-top: 11rem!important;
+    padding-top: 8rem!important;
+}
+.pt-15 {
+    padding-top: 12rem!important;
 }
 
 .pb-13 {

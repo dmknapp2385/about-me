@@ -55,7 +55,7 @@ function Contact () {
     return (
         <section className="pt-13 mx-auto" style={{maxWidth: '400px'}}>
             <h1 className="pb-4 is-size-3">
-                Contact Me
+                Contact Me Here 
             </h1>
             <form onSubmit={handleSubmit} id='contact-form'>
                 <div className="field">
@@ -91,6 +91,9 @@ function Contact () {
                 </div>
                 
             </form>
+            <h2 className="pb-4 mb-4 is-size-4">
+                or email me at dmknapp2385@gmail.com
+            </h2>
         </section>
     )
 }
