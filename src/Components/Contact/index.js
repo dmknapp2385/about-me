@@ -33,15 +33,32 @@ function Contact () {
           }
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const { name, email, message } = formState;
         const isValid = validateEmail(email)
         if(name.length === 0 || !validateEmail || message.length === 0){
             alert('Please complete the form')
         } else {
-            alert('Your email has been submitted')
-            setFormState({name:'', email:'', message: ''});
+            try{
+                let res = await fetch('https://formsubmit.co/dmknapp2385@gmail.com', {
+                    method: "POST", 
+                    body: JSON.stringify({
+                        name: formState.name,
+                        email: formState.email,
+                        message: formState.message
+                    })
+
+                })
+                if(res.status === 200) {
+                    alert('Your email has been submitted')
+                    setFormState({name:'', email:'', message: ''});
+                } else{
+                    setErrorMessage('Some Error Occured')
+                }
+            }catch(err) {
+                console.error(err)
+            }
         }
         
     }
