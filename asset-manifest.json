@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/about-me/static/css/main.0dc4ac70.css",
-    "main.js": "/about-me/static/js/main.29a9dcf5.js",
+    "main.css": "/about-me/static/css/main.c1f33108.css",
+    "main.js": "/about-me/static/js/main.5af3b3db.js",
     "static/js/787.128fc6e9.chunk.js": "/about-me/static/js/787.128fc6e9.chunk.js",
+    "static/media/reef.jpg": "/about-me/static/media/reef.cbb072dce797b3634669.jpg",
     "static/media/WeatherSpot.jpg": "/about-me/static/media/WeatherSpot.9088aafa342e689d294b.jpg",
     "static/media/Rocks-and-Ropes.jpg": "/about-me/static/media/Rocks-and-Ropes.b8b251d4fc9df95c3e5c.jpg",
     "static/media/Bored-and-Brews.jpg": "/about-me/static/media/Bored-and-Brews.15b64dce9757178e6c8d.jpg",
@@ -12,12 +13,12 @@
     "static/media/Notable.jpg": "/about-me/static/media/Notable.210d9781d8646a841232.jpg",
     "static/media/Song-Starter-3000.jpg": "/about-me/static/media/Song-Starter-3000.31416d3519dc82db8710.jpg",
     "index.html": "/about-me/index.html",
-    "main.0dc4ac70.css.map": "/about-me/static/css/main.0dc4ac70.css.map",
-    "main.29a9dcf5.js.map": "/about-me/static/js/main.29a9dcf5.js.map",
+    "main.c1f33108.css.map": "/about-me/static/css/main.c1f33108.css.map",
+    "main.5af3b3db.js.map": "/about-me/static/js/main.5af3b3db.js.map",
     "787.128fc6e9.chunk.js.map": "/about-me/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dc4ac70.css",
-    "static/js/main.29a9dcf5.js"
+    "static/css/main.c1f33108.css",
+    "static/js/main.5af3b3db.js"
   ]
 }
